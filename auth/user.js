@@ -6,7 +6,7 @@ const signOutLink = document.getElementById('sign-out-link');
 const user = getUser();
 if (!user) {
     const base =
-        location.pathname === '/' || location.pathname === '/solutions-web/user-auth/'
+        location.pathname === '/' || location.pathname === '/users/users.js'
             ? './'
             : '../';
     location.replace(`${base}auth/?redirectUrl=${encodeURIComponent(location)}`);
