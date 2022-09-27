@@ -31,6 +31,7 @@ export async function signOutUser() {
 
 export async function updateProfile(profile) {
     // > Part A: upsert into profiles table
+    return await client.from('profiles').upsert(profile).single();
 }
 
 export async function getProfile(id) {
